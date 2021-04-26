@@ -15,6 +15,7 @@ services:
     privileged: true
     volumes:
        - ./bitrix/www:/home/bitrix/www
+       - ./bitrix/mysql:/var/lib/mysql
    
 
     
