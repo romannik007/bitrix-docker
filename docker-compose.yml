@@ -1,0 +1,20 @@
+version: '3'
+services:
+  bitrix:
+    image: bitrix-base-image:latest
+    hostname: bitrix
+    container_name: bitrix
+    ports:
+      - "80:80"
+      - "443:443"
+      - "3306:3306"
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - seccomp:unconfined
+    privileged: true
+    volumes:
+       - ./bitrix/www:/home/bitrix/www
+   
+
+    
