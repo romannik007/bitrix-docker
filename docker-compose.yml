@@ -1,7 +1,7 @@
 version: '3'
 services:
   bitrix:
-    image: bitrix-base-image:latest
+    image: romannik/bitrix:bitrix-base-new
     hostname: bitrix
     container_name: bitrix
     ports:
