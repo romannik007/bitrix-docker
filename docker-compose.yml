@@ -3,9 +3,9 @@ services:
   bitrix:
     image: romannik/bitrix:bitrix-base-new
     hostname: bitrix
-    container_name: bitrix
+    #container_name: bitrix
     ports:
-      - "80:80"
+      - "8080:80"
       - "443:443"
       - "3306:3306"
     cap_add:
