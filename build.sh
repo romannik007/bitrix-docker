@@ -15,4 +15,5 @@ docker create --name bitrix-new --cap-add SYS_ADMIN --security-opt seccomp:uncon
               -v /sys/fs/cgroup:/sys/fs/cgroup:ro  bitrix:win
 docker start bitrix-win
 docker exec -ti bitrix-win sh -c "/root/bitrix-env.sh -p -H  bitrix -M $mysql_root_pass;/root/menu.sh;bash"
+docker exec -ti bitrix-win sh -c "/root/mysql.sh;exit"
 docker stop bitrix-win
