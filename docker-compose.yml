@@ -1,11 +1,12 @@
 version: '3'
 services:
   bitrix:
-    image: romannik/bitrix:bitrix-base-new
+    build:
+      dockerfile: dockerfile
     hostname: bitrix
     #container_name: bitrix
     ports:
-      - "8080:80"
+      - "80:80"
       - "443:443"
       - "3306:3306"
     cap_add:
@@ -13,9 +14,6 @@ services:
     security_opt:
       - seccomp:unconfined
     privileged: true
-    volumes:
-       - ./bitrix/www:/home/bitrix/www
-       - ./bitrix/mysql:/var/lib/mysql
-   
+    
 
     
